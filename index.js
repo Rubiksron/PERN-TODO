@@ -12,7 +12,7 @@ app.use(express.json()); //lets us access req.body
 //needed for depoloying to provide the index.html as the source to build from
 app.use(express.static(path.join(__dirname, 'build')));
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'static', 'index.html'));
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 //routes//
